@@ -1,4 +1,3 @@
-import time
 import allure
 from allure_commons.types import Severity
 from ui.model import app
@@ -14,7 +13,7 @@ class TestsTariff:
 
     @allure.severity(Severity.NORMAL)
     @allure.title('Проверка страницы с тарифами ')
-    def test_check_tariff(browser_management):
+    def test_check_tariff(self):
 
         with allure.step("Открытие главной страницы"):
             app.given_scloud_opened()
@@ -28,7 +27,7 @@ class TestsTariff:
 
     @allure.severity(Severity.NORMAL)
     @allure.title('Проверка калькулятора тарифа')
-    def test_calculator_tariff(browser_management):
+    def test_calculator_tariff(self):
         with allure.step("Открытие главной страницы"):
             app.given_scloud_opened()
         with allure.step("Переход к странице с тарифами"):

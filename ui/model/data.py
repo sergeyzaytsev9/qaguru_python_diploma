@@ -1,6 +1,5 @@
 from faker import Faker
-from enum import Enum
-from typing import Literal, List
+from typing import List
 from dataclasses import dataclass
 
 
@@ -19,23 +18,20 @@ fresh_tariff = Service(
     service_name='fresh',
     configuration_names=
     [
-        '1С: Управление нашей фирмой'
+        '1С: Управление нашей фирмой',
+        '1С: Зарплата и управление персоналом ПРОФ'
     ],
     count_sessions=5,
     count_infobases=5,
     has_configurator='true',
-    summary_count_sessions='5',
-    summary_count_infobases='14',
-
+    summary_count_sessions='10',
+    summary_count_infobases='15'
 )
 
 
 fake = Faker('en_US')
-email_random = fake.email()
 fake_login = fake.name().replace(" ", "")
 fake_password = fake.random.randint(3, 10)
-text_random = fake.text()
-comment = fake.text()
 
 
 

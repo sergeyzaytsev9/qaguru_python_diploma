@@ -44,7 +44,7 @@ class TariffPage:
     @step
     def check_list_configurations(self, value):
         browser.all('.v-сombinedCalculator__selectedProductsList .v-сombinedCalculator__selectedProductTitle')\
-            .should(have.texts(value.configuration_names))
+            .should(have.exact_texts(*value.configuration_names))
         return self
 
     @step

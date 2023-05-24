@@ -1,5 +1,4 @@
 from selene import have
-from selene.support import by
 from selene.support.shared import browser
 from allure_commons._allure import step
 
